@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;500;700;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-cyber-bg text-cyber-text font-sans overflow-x-hidden;
+    background-image: 
+      radial-gradient(at 50% 0%, rgba(17, 24, 39, 0.5) 0px, transparent 50%),
+      radial-gradient(at 0% 100%, rgba(31, 41, 55, 0.3) 0px, transparent 50%);
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-cyber {
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 0.05em;
+  }
+}
+
+/* Custom Webkit Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #030712;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1f2937;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00F0FF;
+}
+
+/* Utility Animations and Effects */
+.cyber-panel {
+  @apply bg-cyber-panel border border-cyber-border rounded-lg relative overflow-hidden;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+}
+
+.cyber-panel-glowing {
+  @apply cyber-panel border-cyber-accent/40;
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.1), inset 0 0 10px rgba(0, 240, 255, 0.05);
+}
+
+.text-glow-green {
+  text-shadow: 0 0 8px rgba(16, 185, 129, 0.6);
+}
+
+.text-glow-red {
+  text-shadow: 0 0 8px rgba(239, 68, 68, 0.6);
+}
+
+.text-glow-yellow {
+  text-shadow: 0 0 8px rgba(245, 158, 11, 0.6);
+}
+
+.text-glow-cyan {
+  text-shadow: 0 0 8px rgba(0, 240, 255, 0.6);
+}
+
+.bg-grid-pattern {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(31, 41, 55, 0.1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(31, 41, 55, 0.1) 1px, transparent 1px);
+}

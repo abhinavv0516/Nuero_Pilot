@@ -1,24 +1,30 @@
-# Ignore virtual environment
+# Virtual environments
 venv/
- 
-# Ignore Python cache
+.venv/
+env/
+.env/
+
+# Node modules & build artifacts
+node_modules/
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+.eslintcache
+
+# Python cache & logs
 __pycache__/
 *.pyc
-
-# VS Code settings
-.vscode/
-
-# OneDrive junk
-*.lnk
-*.tmp
-*.ini
-*.DS_Store
-Thumbs.db
-
-# Model files
-wavesMODEL/*.pkl
-wavesMODEL/*.png
-wavesMODEL/features_epoched.csv
+*.pyo
+*.pyd
+.pytest_cache/
+*.log
 
 # Jupyter checkpoints
 .ipynb_checkpoints/
+
+# OS metadata
+.DS_Store
+Thumbs.db
+*.lnk
+*.tmp
+*.ini
